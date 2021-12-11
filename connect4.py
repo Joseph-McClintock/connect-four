@@ -1,3 +1,4 @@
+import os
 gameMap = [[" ", " ", " ", " ", " ", " ", " ", " ", " "],
            ["|", " ", " ", " ", " ", " ", " ", " ", "|"],
            ["|", " ", " ", " ", " ", " ", " ", " ", "|"],
@@ -30,6 +31,7 @@ def place_token(token):
             print("INVALID column try again: ")
         elif gameMap[i][move] == " ":
             gameMap[i][move] = token
+            os.system('cls' if os.name == 'nt' else 'clear')
             display_map()
 
 
